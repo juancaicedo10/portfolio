@@ -2,12 +2,15 @@ import LoadingBar from "../components/LoadingBar"
 
 function Technologies() {
   return (
-    <div className="w-full flex bg-black flex-col justify-center items-center">
-      <LoadingBar title='HTML' percent={95} />
-      <LoadingBar title="CSS, BOOTSTRAP, TAILWINDCSS" percent={95}/>
-      <LoadingBar title="JAVASCRIPT, TYPESCRIPT" percent={80}/>
-      <LoadingBar title="REACT" percent={85}/>
-      <LoadingBar title="MONGODB, MYSQL" percent={75}/>
+    <div className="w-full h-[100vh] flex bg-black flex-col justify-center items-center text-white" id="technologies">
+      <h1 className="font-bold text-6xl">Technologies</h1>
+    <div className="w-full flex flex-col justify-between items-center h-[60%]">
+      <LoadingBar title='HTML' targetPercent={95} />
+      <LoadingBar title="CSS, BOOTSTRAP, TAILWINDCSS" targetPercent={95}/>
+      <LoadingBar title="JAVASCRIPT, TYPESCRIPT" targetPercent={80}/>
+      <LoadingBar title="REACT" targetPercent={85}/>
+      <LoadingBar title="MONGODB, MYSQL" targetPercent={75}/>
+    </div>
     </div>
   )
 }
