@@ -9,23 +9,23 @@ function Navbar() {
     element?.scrollIntoView({ behavior: 'smooth' });
   }
   return (
-    <div className="w-full bg-black flex items-center justify-center text-white text-2xl h-[10vh] fixed top-0 ">
+    <div className="w-full bg-black flex items-center justify-center text-white text-2xl h-[10vh] fixed top-0 z-50">
       <ul className='h-full flex items-center  absolute left-0'>
-      <img src={Logo} alt="" className='w-full h-full object-contain' />
-      <h1 className="text-4xl font-extrabold font-mono">JuanCoding</h1>
+
+      <img src={Logo} alt="" className='w-full h-full object-contain select-none cursor-pointer' onClick={() => scrollTo('about')} />
+      <h1 className="text-4xl font-extrabold font-mono select-none cursor-pointer" onClick={() => scrollTo('about')}>JuanCoding</h1>
       </ul>
       <ul className="flex w-1/2 justify-around font-normal font-sans text-4xl select-none cursor-pointer">
       <button className="focus:outline-none border-b-4 border-transparent focus:border-blue-500" onClick={() => scrollTo('projects')}>Projects</button>
       <button className="focus:outline-none border-b-4 border-transparent focus:border-blue-500" onClick={() => scrollTo('technologies')}>Technologies</button>
       <button className="focus:outline-none border-b-4 border-transparent focus:border-blue-500" onClick={() => scrollTo('about')}>About Me</button>
       </ul>
-      <ul className="flex justify-around text-xl bg-red-200 w-[210px] absolute right-0">
-        <li>Facebook</li>
+      <ul className="flex justify-around text-xl w-[210px] absolute right-0">
         <li>
-            <LinkedInIcon />
+            <LinkedInIcon style={{ fontSize: 60}} className='text-[#0a66c2]'/>
         </li>
         <li>
-            <GitHubIcon />
+            <GitHubIcon style={{ fontSize: 50 }}/>
         </li>
       </ul>
     </div>

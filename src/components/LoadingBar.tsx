@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 
+
 type LoadingBarProps = {
   title: string
   targetPercent: number
+  id?: string
 }
 
-function LoadingBar({ title, targetPercent }: LoadingBarProps) {
+function LoadingBar({ title, targetPercent, id }: LoadingBarProps) {
   const [isVisible, setIsVisible] = useState(false);
   const [percent, setPercent] = useState(0);
 
@@ -43,7 +45,7 @@ function LoadingBar({ title, targetPercent }: LoadingBarProps) {
         <h1 className="text-2xl font-semibold text-white">{ percent }%</h1>
       </section>
       <div className="w-full h-8 bg-gray-300 rounded-full overflow-hidden">
-        <div id="progress-bar" className={`h-full bg-gradient-to-r rounded-full from-indigo-500 to-blue-600 transition-all duration-6000 ease-in-out`} style={{width: isVisible ? `${percent}%` : '0%'}}></div>
+        <div id={id} className={`h-full bg-gradient-to-r rounded-full from-purple-600 to-blue-600 transition-all duration-6000 ease-in-out`} style={{width: isVisible ? `${percent}%` : '0%'}}></div>
       </div>
     </div>
   )

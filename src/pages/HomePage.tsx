@@ -9,10 +9,8 @@ function HomePage() {
     <img src={logo} alt="juancoding logo" className='w-full h-full object-cover' />
   </div>
   <TypeWriter text={['Juuan Esteban Caicedo Valencia']} speed={60} />
-  <h2 className='text-6xl font-extrabold font-sans text-purple-600'>FullStack Web Developer</h2>
+  <h2 className='text-6xl font-extrabold font-russo text-purple-600 my-2'>Full Stack Web Developer</h2>
 <p className="text-lg font-bold text-gray-300 w-1/2">Soy un apasionado desarrollador FullStack con amplia experiencia en la creación de aplicaciones web modernas y funcionales. Mi enfoque principal es ofrecer soluciones creativas y eficientes para satisfacer las necesidades de mis clientes. Con habilidades en tecnologías como HTML, CSS, JavaScript, React, Node.js y bases de datos SQL y NoSQL, estoy preparado para enfrentar cualquier desafío de desarrollo. ¡Trabajemos juntos para llevar tu proyecto al siguiente nivel!</p>
-
-        <button className="font-semibold my-2 px-8 py-2 rounded-3xl bg-gradient-to-r from-purple-400 to-blue-500 border-2¿ border-white">Lets Begin</button>
     </div>
   )
 }

@@ -9,7 +9,7 @@ function Technologies() {
       <LoadingBar title="CSS, BOOTSTRAP, TAILWINDCSS" targetPercent={95}/>
       <LoadingBar title="JAVASCRIPT, TYPESCRIPT" targetPercent={80}/>
       <LoadingBar title="REACT" targetPercent={85}/>
-      <LoadingBar title="MONGODB, MYSQL" targetPercent={75}/>
+      <LoadingBar title="MONGODB, MYSQL" targetPercent={75} id="progress-bar"/>
     </div>
     </div>
   )
