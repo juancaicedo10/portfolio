@@ -13,7 +13,7 @@ function ProjectCard({ title, description, image }: ProjectCardProps) {
       <div className="max-w-[450px] overflow-hidden whitespace-normal">
   <p className="text-lg text-center py-3 px-4 font-mono">{description}</p>
 </div>
-        <button className="bg-gradient-to-r from-blue-500 to-red-600 text-white text-2xl font-russo rounded-3xl px-6 py-4 m-4">View Project</button>
+        <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-2xl font-russo rounded-3xl px-6 py-4 m-4">View Project</button>
     </div>
   )
 }
