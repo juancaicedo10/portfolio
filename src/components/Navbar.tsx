@@ -19,14 +19,15 @@ function Navbar() {
       <button className="focus:outline-none border-b-4 border-transparent focus:border-blue-500" onClick={() => scrollTo('projects')}>Projects</button>
       <button className="focus:outline-none border-b-4 border-transparent focus:border-blue-500" onClick={() => scrollTo('technologies')}>Technologies</button>
       <button className="focus:outline-none border-b-4 border-transparent focus:border-blue-500" onClick={() => scrollTo('about')}>About Me</button>
+      <button className='focus:outline-none border-b-4 border-transparent focus:border-blue-500'>Lets Work</button>
       </ul>
       <ul className="flex justify-around text-xl w-[210px] absolute right-0">
-        <li>
-            <LinkedInIcon style={{ fontSize: 60}} className='text-[#0a66c2]'/>
-        </li>
-        <li>
+        <a href="https://www.linkedin.com/in/juan-esteban-caicedo-valencia-a07551264/" target='_blank'>
+        <LinkedInIcon style={{ fontSize: 60}} className='text-[#0a66c2]'/>
+        </a>
+        <a href='https://github.com/Jayz1x' target='_blank'>
             <GitHubIcon style={{ fontSize: 50 }}/>
-        </li>
+        </a>
       </ul>
     </div>
   )

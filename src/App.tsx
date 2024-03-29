@@ -2,6 +2,7 @@ import HomePage from './pages/HomePage'
 import Navbar from './components/Navbar'
 import Projects from './pages/Projects'
 import Technologies from './pages/Technologies'
+import LetsWork from './pages/LetsWork'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <HomePage />
       <Projects />
       <Technologies />
+      <LetsWork />
     </>
   )
 }
