@@ -6,7 +6,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 function LetsWork() {
   return (
     <div className='w-full min-h-[1024px] max-h-[1024px] flex flex-col items-center justify-center bg-black text-white' id="contact">
-      <h1 className='text-4xl md:text-6xl font-bold text-center'>Contact Me</h1>
+      <h1 className='text-4xl md:text-6xl font-bold text-center mt-28'>Contact Me</h1>
       <p className='text-2xl font-mono my-5 text-center'>Vamos a trabajar juntos!</p>
     <div className='flex w-[90%] lg:w-3/4 flex-col md:flex-row justify-center my-8'>
       <ul className='w-full md:w-1/2'>
