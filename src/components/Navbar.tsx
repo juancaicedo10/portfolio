@@ -1,35 +1,39 @@
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Logo from '../images/logo.png';
+import { useState } from 'react';
 
 function Navbar() {
+  const [ isOpen, setIsOpen ] = useState(false)
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
     console.log(element)
     element?.scrollIntoView({ behavior: 'smooth' });
   }
   return (
-    <div className="w-full bg-black flex items-center justify-center text-white text-2xl h-[10vh] fixed top-0 z-50">
-      <ul className='h-full flex items-center  absolute left-0'>
-
-      <img src={Logo} alt="" className='w-full h-full object-contain select-none cursor-pointer' onClick={() => scrollTo('about')} />
-      <h1 className="text-4xl font-extrabold font-mono select-none cursor-pointer" onClick={() => scrollTo('about')}>JuanCoding</h1>
-      </ul>
-      <ul className="flex w-1/2 justify-around font-normal font-sans text-4xl select-none cursor-pointer">
-      <button className="focus:outline-none border-b-4 border-transparent focus:border-blue-500" onClick={() => scrollTo('projects')}>Projects</button>
-      <button className="focus:outline-none border-b-4 border-transparent focus:border-blue-500" onClick={() => scrollTo('technologies')}>Technologies</button>
-      <button className="focus:outline-none border-b-4 border-transparent focus:border-blue-500" onClick={() => scrollTo('about')}>About Me</button>
-      <button className='focus:outline-none border-b-4 border-transparent focus:border-blue-500'>Lets Work</button>
-      </ul>
-      <ul className="flex justify-around text-xl w-[210px] absolute right-0">
-        <a href="https://www.linkedin.com/in/juan-esteban-caicedo-valencia-a07551264/" target='_blank'>
-        <LinkedInIcon style={{ fontSize: 60}} className='text-[#0a66c2]'/>
-        </a>
-        <a href='https://github.com/Jayz1x' target='_blank'>
-            <GitHubIcon style={{ fontSize: 50 }}/>
-        </a>
-      </ul>
+    <nav className="bg-white border-gray-200 dark:bg-gray-900 fixed w-full z-50">
+    <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <div className="flex items-center">
+        <img src={Logo} alt="logo" className="w-12 h-12 md:w-16 md:h-16 lg:w-18 lg:h-18"/>
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold font-mono text-white">JuanCoding</h1>
+      </div>
+      <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"  onClick={() => setIsOpen(!isOpen)}>
+          <span className="sr-only">Open main menu</span>
+      </button>
+      <div className={`${isOpen ? '' : 'hidden'} w-full md:block md:w-auto`} id="navbar-default">
+        <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <h1 onClick={() => scrollTo('about')} className="block py-2 px-3 text-white  rounded md:bg-transparent  md:p-0 dark:text-white cursor-pointer select-none text-3xl">Home</h1>
+          <li>
+          <h1 onClick={() => scrollTo('projects')} className="block py-2 px-3 text-white rounded md:bg-transparent  md:p-0 dark:text-white cursor-pointer select-none text-3xl">Projects</h1>
+          </li>
+          <li>
+          <h1 onClick={() => scrollTo('technologies')} className="block py-2 px-3 text-white  rounded md:bg-transparent  md:p-0 dark:text-white cursor-pointer select-none text-3xl">Technologies</h1>
+          </li>
+          <li>
+          <h1 onClick={() => scrollTo('contact')} className="block py-2 px-3 text-white  rounded md:bg-transparent  md:p-0 dark:text-white cursor-pointer select-none text-3xl">Contact</h1>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
   )
 }
 

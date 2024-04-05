@@ -39,10 +39,10 @@ function LoadingBar({ title, targetPercent, id }: LoadingBarProps) {
     return () => clearInterval(interval);
   }, [targetPercent]);
   return (
-    <div className="w-1/2 m-3 px-5">
+    <div className="w-[90%] m-5 px-5 lg:w-1/2">
       <section className="w-full flex justify-between">
-        <h1 className="text-2xl font-semibold text-white">{ title }</h1>
-        <h1 className="text-2xl font-semibold text-white">{ percent }%</h1>
+        <h1 className="text-base sm:text-2xl font-semibold text-white">{ title }</h1>
+        <h1 className="text-lg sm:text-2xl font-semibold text-white">{ percent }%</h1>
       </section>
       <div className="w-full h-8 bg-gray-300 rounded-full overflow-hidden">
         <div id={id} className={`h-full bg-gradient-to-r rounded-full from-purple-600 to-blue-600 transition-all duration-6000 ease-in-out`} style={{width: isVisible ? `${percent}%` : '0%'}}></div>
