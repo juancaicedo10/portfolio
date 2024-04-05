@@ -10,6 +10,7 @@ function Technologies() {
       <LoadingBar title="JAVASCRIPT, TYPESCRIPT" targetPercent={80}/>
       <LoadingBar title="REACT" targetPercent={85}/>
       <LoadingBar title="MONGODB, MYSQL" targetPercent={75} id="progress-bar"/>
+      <LoadingBar title="GIT, GITHUB" targetPercent={90} id="progress-bar"/>
     </div>
     </div>
   )
