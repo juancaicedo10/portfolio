@@ -55,11 +55,11 @@ function LetsWork() {
         <form action="" className='grid grid-cols-2 gap-2 w-full lg:w-1/2' onSubmit={handleSubmit}>
           <div className='flex flex-col'>
             <label htmlFor="name">Nombre</label>
-            <input type="text" name="name" id="name" value={name} placeholder='Nombre' className='border p-3 rounded-md bg-transparent' onChange={(e) => setName(e.target.value.replace(/[^a-zA-Z ]/g, ''))}/>
+            <input type="text" name="name" id="name" value={name} placeholder='Nombre' className='border p-3 rounded-md bg-transparent' onChange={(e) => setName(e.target.value.replace(/[^a-zA-Z ]/g, ''))} required/>
           </div>
           <div className='flex flex-col'>
             <label htmlFor="surname">Apellido</label>
-            <input type="text" name="surname" id="surname" value={lastName} placeholder='Apellido' className='border p-3 rounded-md bg-transparent' onChange={(e) => setLastName(e.target.value.replace(/[^a-zA-Z ]/g, ''))}/>
+            <input type="text" name="surname" id="surname" value={lastName} placeholder='Apellido' className='border p-3 rounded-md bg-transparent' onChange={(e) => setLastName(e.target.value.replace(/[^a-zA-Z ]/g, ''))} required/>
           </div>
           <div className='flex flex-col'>
             <label htmlFor="email">E-mail</label>
@@ -70,7 +70,7 @@ function LetsWork() {
             <input type="text" name="phone" id="phone" value={phone} placeholder='Telefono(opcional)' className='border p-3 rounded-md bg-transparent' onChange={(e) => setPhone(e.target.value.replace(/[^0-9]/g, ''))}/>
           </div>
           <label htmlFor="message">Mensaje</label>
-          <textarea name="message" id="message" rows={8} value={message} placeholder='tu mensaje' className='p-1 rounded-md border bg-transparent col-span-2' onChange={(e) => setMessage(e.target.value.replace(/[^a-zA-Z ]/g, ''))}></textarea>
+          <textarea name="message" id="message" rows={8} value={message} placeholder='tu mensaje' className='p-1 rounded-md border bg-transparent col-span-2' onChange={(e) => setMessage(e.target.value.replace(/[^a-zA-Z ]/g, ''))} required></textarea>
           <button className='bg-gradient-to-r from-purple-600 to-blue-700 rounded-lg font-bold py-4 my-4 text-2xl' type='submit'>Enviar</button>
         </form>
       </div>
