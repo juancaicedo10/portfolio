@@ -47,7 +47,7 @@ function LetsWork() {
             <LinkedInIcon fontSize='large' />
             LinkedIn
           </a>
-          <a href='https://github.com/Jayz1x' target='_blank' className='flex text-xl justify-start items-center text-white hover:text-gray-300 font-mono py-3 w-1/2'>
+          <a href='https://github.com/JuanCaicedo10' target='_blank' className='flex text-xl justify-start items-center text-white hover:text-gray-300 font-mono py-3 w-1/2'>
             <GitHubIcon fontSize='large' />
             GitHub
           </a>
