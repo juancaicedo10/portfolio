@@ -35,7 +35,7 @@ function Projects() {
       <h1 className="text-center font-bold text-4xl lg:text-7xl mt-16">Projects</h1>
       <div className='flex justify-center items-center w-full'>
         <button onClick={() => handleScroll('left')} className='bg-purple-600 rounded-full p-4 block translate-x-[50%] z-20'>
-          <ChevronLeftIcon fontSize='large'/>
+        <ChevronLeftIcon fontSize='large' style={{ backgroundColor: 'rgb(147 51 234 / var(--tw-bg-opacity))' }}/>
         </button>
         <div ref={scrollContainerRef} className="overflow-hidden whitespace-nowrap w-full lg:w-[1200px] flex items-center h-[700px]">
         <ProjectCard
@@ -77,7 +77,7 @@ function Projects() {
 
         </div>
         <button onClick={() => handleScroll('right')} className='bg-purple-600 rounded-full p-4 flex translate-x-[-50%] z-20'>
-          <ChevronRightIcon fontSize='large'/>
+          <ChevronRightIcon fontSize='large' style={{ backgroundColor: 'rgb(147 51 234 / var(--tw-bg-opacity))' }}/>
         </button>
       </div>
     </div>

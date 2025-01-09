@@ -30,7 +30,7 @@ function ProjectCard({
         </p>
       </div>
       <button className="absolute bottom-0 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-lg sm:text-xl md:text-2xl font-russo rounded-3xl px-6 py-4 m-4">
-        <a href={URL} target="_blank">
+        <a href={URL} target="_blank" className="bg-transparent">
           View Project
         </a>
       </button>
